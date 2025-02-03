@@ -1,0 +1,1588 @@
+INFO  2025/02/03 14:41:56.998 []
+				-[] c.d.w.DroneInventorySystemApplication - Starting DroneInventorySystemApplication using Java 17.0.10 with PID 55285 (/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes started by ryosukekijima in /Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem)
+INFO  2025/02/03 14:41:57.000 []
+				-[] c.d.w.DroneInventorySystemApplication - No active profile set, falling back to 1 default profile: "default"
+INFO  2025/02/03 14:41:57.068 []
+				-[] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  2025/02/03 14:41:57.068 []
+				-[] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  2025/02/03 14:41:57.748 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2025/02/03 14:41:57.853 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 100 ms. Found 3 JPA repository interfaces.
+INFO  2025/02/03 14:41:58.384 []
+				-[] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+INFO  2025/02/03 14:41:58.390 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:41:58.392 []
+				-[] o.a.catalina.core.StandardService - Starting service [Tomcat]
+INFO  2025/02/03 14:41:58.392 []
+				-[] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+INFO  2025/02/03 14:41:58.429 []
+				-[] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+INFO  2025/02/03 14:41:58.430 []
+				-[] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1361 ms
+INFO  2025/02/03 14:41:58.461 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+ERROR 2025/02/03 14:41:59.750 []
+				-[] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLSyntaxErrorException: Unknown database 'stock'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.getConnectionUrl(H2ConsoleAutoConfiguration.java:94)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:395)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources(H2ConsoleAutoConfiguration.java:86)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.lambda$h2Console$0(H2ConsoleAutoConfiguration.java:69)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.withThreadContextClassLoader(H2ConsoleAutoConfiguration.java:78)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.h2Console(H2ConsoleAutoConfiguration.java:69)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:201)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:96)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:85)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4414)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:126)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:105)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:499)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:218)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:619)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.digitalojt.web.DroneInventorySystemApplication.main(DroneInventorySystemApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+INFO  2025/02/03 14:42:00.071 []
+				-[] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+INFO  2025/02/03 14:42:00.085 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+ERROR 2025/02/03 14:42:01.124 []
+				-[] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLSyntaxErrorException: Unknown database 'stock'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.digitalojt.web.DroneInventorySystemApplication.main(DroneInventorySystemApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+ERROR 2025/02/03 14:42:01.137 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+WARN  2025/02/03 14:42:01.139 []
+				-[] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+INFO  2025/02/03 14:42:01.151 []
+				-[] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+INFO  2025/02/03 14:42:01.177 []
+				-[] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+ERROR 2025/02/03 14:42:01.196 []
+				-[] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.digitalojt.web.DroneInventorySystemApplication.main(DroneInventorySystemApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 20 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:143)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:348)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 35 common frames omitted
+INFO  2025/02/03 14:42:29.505 []
+				-[] c.d.w.DroneInventorySystemApplication - Starting DroneInventorySystemApplication using Java 17.0.10 with PID 55296 (/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes started by ryosukekijima in /Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem)
+INFO  2025/02/03 14:42:29.507 []
+				-[] c.d.w.DroneInventorySystemApplication - No active profile set, falling back to 1 default profile: "default"
+INFO  2025/02/03 14:42:29.579 []
+				-[] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  2025/02/03 14:42:29.580 []
+				-[] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  2025/02/03 14:42:30.238 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2025/02/03 14:42:30.344 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 100 ms. Found 3 JPA repository interfaces.
+INFO  2025/02/03 14:42:30.874 []
+				-[] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+INFO  2025/02/03 14:42:30.880 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:42:30.882 []
+				-[] o.a.catalina.core.StandardService - Starting service [Tomcat]
+INFO  2025/02/03 14:42:30.882 []
+				-[] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+INFO  2025/02/03 14:42:30.948 []
+				-[] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+INFO  2025/02/03 14:42:30.956 []
+				-[] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1372 ms
+INFO  2025/02/03 14:42:31.024 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+INFO  2025/02/03 14:42:31.317 []
+				-[] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@588f0695
+INFO  2025/02/03 14:42:31.319 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+INFO  2025/02/03 14:42:31.331 []
+				-[] o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/stock_mng'
+INFO  2025/02/03 14:42:31.681 []
+				-[] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+INFO  2025/02/03 14:42:32.504 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  2025/02/03 14:42:32.723 []
+				-[] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+WARN  2025/02/03 14:42:33.157 []
+				-[] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2025/02/03 14:42:33.366 []
+				-[] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@776b8e24, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6a8e6cd4, org.springframework.security.web.context.SecurityContextHolderFilter@25629e55, org.springframework.security.web.header.HeaderWriterFilter@79fdf8d0, org.springframework.security.web.csrf.CsrfFilter@699cb9a6, org.springframework.security.web.authentication.logout.LogoutFilter@19c9d0a8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7f1c4c99, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b3581ac, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@57af9a98, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@eb0ec41, org.springframework.security.web.access.ExceptionTranslationFilter@6152ba40, org.springframework.security.web.access.intercept.AuthorizationFilter@7c1085f4]
+INFO  2025/02/03 14:42:33.628 []
+				-[] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+INFO  2025/02/03 14:42:33.656 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:42:33.669 []
+				-[] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+INFO  2025/02/03 14:42:33.679 []
+				-[] c.d.w.DroneInventorySystemApplication - Started DroneInventorySystemApplication in 4.514 seconds (process running for 5.416)
+INFO  2025/02/03 14:42:46.705 []
+				-[] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  2025/02/03 14:42:46.707 []
+				-[] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+INFO  2025/02/03 14:42:46.714 []
+				-[] o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+INFO  2025/02/03 14:43:16.487 [0:0:0:0:0:0:0:1]
+				-[dotlife] c.d.w.c.CenterInfoController - ACCESS
+INFO  2025/02/03 14:43:16.498 [0:0:0:0:0:0:0:1]
+				-[dotlife] c.d.w.c.CenterInfoController - APP: GET - index - START
+INFO  2025/02/03 14:43:16.657 [0:0:0:0:0:0:0:1]
+				-[dotlife] c.d.w.c.CenterInfoController - APP: GET - index - END
+INFO  2025/02/03 14:43:19.181 [0:0:0:0:0:0:0:1]
+				-[dotlife] c.d.w.c.OperationLogController - ACCESS
+INFO  2025/02/03 14:43:19.182 [0:0:0:0:0:0:0:1]
+				-[dotlife] c.d.w.c.OperationLogController - APP: GET - index - START
+INFO  2025/02/03 14:43:20.156 [0:0:0:0:0:0:0:1]
+				-[dotlife] c.d.w.c.OperationLogController - APP: GET - index - END
+INFO  2025/02/03 14:43:27.436 [0:0:0:0:0:0:0:1]
+				-[dotlife] c.d.w.c.CenterInfoController - ACCESS
+INFO  2025/02/03 14:43:27.449 [0:0:0:0:0:0:0:1]
+				-[dotlife] c.d.w.c.CenterInfoController - APP: GET - index - START
+INFO  2025/02/03 14:43:27.499 [0:0:0:0:0:0:0:1]
+				-[dotlife] c.d.w.c.CenterInfoController - APP: GET - index - END
+INFO  2025/02/03 14:43:28.690 [0:0:0:0:0:0:0:1]
+				-[dotlife] c.d.w.c.OperationLogController - ACCESS
+INFO  2025/02/03 14:43:28.693 [0:0:0:0:0:0:0:1]
+				-[dotlife] c.d.w.c.OperationLogController - APP: GET - index - START
+INFO  2025/02/03 14:43:29.583 [0:0:0:0:0:0:0:1]
+				-[dotlife] c.d.w.c.OperationLogController - APP: GET - index - END
+INFO  2025/02/03 14:43:34.514 [0:0:0:0:0:0:0:1]
+				-[dotlife] c.d.w.c.CenterInfoController - ACCESS
+INFO  2025/02/03 14:43:34.516 [0:0:0:0:0:0:0:1]
+				-[dotlife] c.d.w.c.CenterInfoController - APP: GET - index - START
+INFO  2025/02/03 14:43:34.539 [0:0:0:0:0:0:0:1]
+				-[dotlife] c.d.w.c.CenterInfoController - APP: GET - index - END
+INFO  2025/02/03 14:43:57.768 [0:0:0:0:0:0:0:1]
+				-[dotlife] c.d.w.c.OperationLogController - ACCESS
+INFO  2025/02/03 14:43:57.771 [0:0:0:0:0:0:0:1]
+				-[dotlife] c.d.w.c.OperationLogController - APP: GET - index - START
+INFO  2025/02/03 14:43:58.598 [0:0:0:0:0:0:0:1]
+				-[dotlife] c.d.w.c.OperationLogController - APP: GET - index - END
+INFO  2025/02/03 14:48:31.391 []
+				-[] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+INFO  2025/02/03 14:48:31.413 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:48:31.447 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2025/02/03 14:48:31.454 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+INFO  2025/02/03 14:48:31.484 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+INFO  2025/02/03 14:48:31.747 []
+				-[] c.d.w.DroneInventorySystemApplication - Starting DroneInventorySystemApplication using Java 17.0.10 with PID 55296 (/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes started by ryosukekijima in /Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem)
+INFO  2025/02/03 14:48:31.749 []
+				-[] c.d.w.DroneInventorySystemApplication - No active profile set, falling back to 1 default profile: "default"
+INFO  2025/02/03 14:48:32.095 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2025/02/03 14:48:32.114 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 3 JPA repository interfaces.
+INFO  2025/02/03 14:48:32.266 []
+				-[] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+INFO  2025/02/03 14:48:32.268 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:48:32.268 []
+				-[] o.a.catalina.core.StandardService - Starting service [Tomcat]
+INFO  2025/02/03 14:48:32.268 []
+				-[] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+INFO  2025/02/03 14:48:32.281 []
+				-[] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+INFO  2025/02/03 14:48:32.281 []
+				-[] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 521 ms
+INFO  2025/02/03 14:48:32.290 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+INFO  2025/02/03 14:48:32.342 []
+				-[] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5228bd3b
+INFO  2025/02/03 14:48:32.343 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+INFO  2025/02/03 14:48:32.343 []
+				-[] o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/stock_mng'
+INFO  2025/02/03 14:48:32.391 []
+				-[] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+INFO  2025/02/03 14:48:32.645 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2025/02/03 14:48:32.781 []
+				-[] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+INFO  2025/02/03 14:48:32.781 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2025/02/03 14:48:32.782 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+INFO  2025/02/03 14:48:32.787 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+INFO  2025/02/03 14:48:32.789 []
+				-[] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+INFO  2025/02/03 14:48:32.803 []
+				-[] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+ERROR 2025/02/03 14:48:32.815 []
+				-[] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.digitalojt.web.DroneInventorySystemApplication.main(DroneInventorySystemApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:94)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1331)
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	インポートされた org.springframework.test は見つかりません
+	StockInfoService を型に解決できません
+	CategoryInfoService を型に解決できません
+	List を型に解決できません
+	StockInfo を型に解決できません
+	StockInfoService を型に解決できません
+	model を解決できません
+
+	at com.digitalojt.web.controller.StockListController.<init>(StockListController.java:3)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:195)
+	... 24 common frames omitted
+INFO  2025/02/03 14:51:02.179 []
+				-[] c.d.w.DroneInventorySystemApplication - Starting DroneInventorySystemApplication using Java 17.0.10 with PID 55296 (/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes started by ryosukekijima in /Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem)
+INFO  2025/02/03 14:51:02.180 []
+				-[] c.d.w.DroneInventorySystemApplication - No active profile set, falling back to 1 default profile: "default"
+INFO  2025/02/03 14:51:02.371 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2025/02/03 14:51:02.383 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 3 JPA repository interfaces.
+INFO  2025/02/03 14:51:02.485 []
+				-[] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+INFO  2025/02/03 14:51:02.488 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:51:02.489 []
+				-[] o.a.catalina.core.StandardService - Starting service [Tomcat]
+INFO  2025/02/03 14:51:02.489 []
+				-[] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+INFO  2025/02/03 14:51:02.497 []
+				-[] o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+INFO  2025/02/03 14:51:02.497 []
+				-[] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 313 ms
+INFO  2025/02/03 14:51:02.505 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+INFO  2025/02/03 14:51:02.537 []
+				-[] com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d39999e
+INFO  2025/02/03 14:51:02.538 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+INFO  2025/02/03 14:51:02.538 []
+				-[] o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/stock_mng'
+INFO  2025/02/03 14:51:02.569 []
+				-[] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+INFO  2025/02/03 14:51:02.792 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2025/02/03 14:51:02.914 []
+				-[] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+INFO  2025/02/03 14:51:02.914 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2025/02/03 14:51:02.917 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+INFO  2025/02/03 14:51:02.943 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+INFO  2025/02/03 14:51:02.946 []
+				-[] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+INFO  2025/02/03 14:51:02.955 []
+				-[] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+ERROR 2025/02/03 14:51:02.960 []
+				-[] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.digitalojt.web.DroneInventorySystemApplication.main(DroneInventorySystemApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:94)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1331)
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	インポートされた org.springframework.test は見つかりません
+	StockInfoService を型に解決できません
+	CategoryInfoService を型に解決できません
+	List を型に解決できません
+	StockInfo を型に解決できません
+	StockInfoService を型に解決できません
+	model を解決できません
+
+	at com.digitalojt.web.controller.StockListController.<init>(StockListController.java:3)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:195)
+	... 24 common frames omitted
+INFO  2025/02/03 14:51:07.513 []
+				-[] c.d.w.DroneInventorySystemApplication - Starting DroneInventorySystemApplication using Java 17.0.10 with PID 55296 (/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes started by ryosukekijima in /Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem)
+INFO  2025/02/03 14:51:07.513 []
+				-[] c.d.w.DroneInventorySystemApplication - No active profile set, falling back to 1 default profile: "default"
+INFO  2025/02/03 14:51:07.625 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2025/02/03 14:51:07.634 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+INFO  2025/02/03 14:51:07.723 []
+				-[] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+INFO  2025/02/03 14:51:07.725 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:51:07.725 []
+				-[] o.a.catalina.core.StandardService - Starting service [Tomcat]
+INFO  2025/02/03 14:51:07.725 []
+				-[] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+INFO  2025/02/03 14:51:07.734 []
+				-[] o.a.c.c.C.[Tomcat-2].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+INFO  2025/02/03 14:51:07.734 []
+				-[] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 218 ms
+INFO  2025/02/03 14:51:07.740 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+INFO  2025/02/03 14:51:07.757 []
+				-[] com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@26509a1
+INFO  2025/02/03 14:51:07.757 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+INFO  2025/02/03 14:51:07.757 []
+				-[] o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/stock_mng'
+INFO  2025/02/03 14:51:07.782 []
+				-[] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+INFO  2025/02/03 14:51:07.916 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2025/02/03 14:51:07.974 []
+				-[] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+INFO  2025/02/03 14:51:07.979 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2025/02/03 14:51:07.980 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+INFO  2025/02/03 14:51:08.005 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+INFO  2025/02/03 14:51:08.005 []
+				-[] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+INFO  2025/02/03 14:51:08.010 []
+				-[] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+ERROR 2025/02/03 14:51:08.014 []
+				-[] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.digitalojt.web.DroneInventorySystemApplication.main(DroneInventorySystemApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:94)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1331)
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	インポートされた org.springframework.test は見つかりません
+	StockInfoService を型に解決できません
+	CategoryInfoService を型に解決できません
+	List を型に解決できません
+	StockInfo を型に解決できません
+	StockInfoService を型に解決できません
+	model を解決できません
+
+	at com.digitalojt.web.controller.StockListController.<init>(StockListController.java:3)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:195)
+	... 24 common frames omitted
+INFO  2025/02/03 14:51:17.648 []
+				-[] c.d.w.DroneInventorySystemApplication - Starting DroneInventorySystemApplication using Java 17.0.10 with PID 55296 (/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes started by ryosukekijima in /Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem)
+INFO  2025/02/03 14:51:17.648 []
+				-[] c.d.w.DroneInventorySystemApplication - No active profile set, falling back to 1 default profile: "default"
+INFO  2025/02/03 14:51:17.871 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2025/02/03 14:51:17.895 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 3 JPA repository interfaces.
+INFO  2025/02/03 14:51:17.985 []
+				-[] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+INFO  2025/02/03 14:51:17.987 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:51:17.987 []
+				-[] o.a.catalina.core.StandardService - Starting service [Tomcat]
+INFO  2025/02/03 14:51:17.987 []
+				-[] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+INFO  2025/02/03 14:51:17.995 []
+				-[] o.a.c.c.C.[Tomcat-3].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+INFO  2025/02/03 14:51:17.996 []
+				-[] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 345 ms
+INFO  2025/02/03 14:51:18.002 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+INFO  2025/02/03 14:51:18.033 []
+				-[] com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7de89cc9
+INFO  2025/02/03 14:51:18.034 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+INFO  2025/02/03 14:51:18.035 []
+				-[] o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/stock_mng'
+INFO  2025/02/03 14:51:18.064 []
+				-[] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+INFO  2025/02/03 14:51:18.222 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2025/02/03 14:51:18.286 []
+				-[] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+INFO  2025/02/03 14:51:18.286 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2025/02/03 14:51:18.287 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+INFO  2025/02/03 14:51:18.310 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+INFO  2025/02/03 14:51:18.311 []
+				-[] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+INFO  2025/02/03 14:51:18.319 []
+				-[] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+ERROR 2025/02/03 14:51:18.320 []
+				-[] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.digitalojt.web.DroneInventorySystemApplication.main(DroneInventorySystemApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:94)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1331)
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	StockInfoService を型に解決できません
+	CategoryInfoService を型に解決できません
+	List を型に解決できません
+	StockInfo を型に解決できません
+	StockInfoService を型に解決できません
+
+	at com.digitalojt.web.controller.StockListController.<init>(StockListController.java:21)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:195)
+	... 24 common frames omitted
+INFO  2025/02/03 14:51:24.921 []
+				-[] c.d.w.DroneInventorySystemApplication - Starting DroneInventorySystemApplication using Java 17.0.10 with PID 55296 (/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes started by ryosukekijima in /Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem)
+INFO  2025/02/03 14:51:24.922 []
+				-[] c.d.w.DroneInventorySystemApplication - No active profile set, falling back to 1 default profile: "default"
+INFO  2025/02/03 14:51:25.054 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2025/02/03 14:51:25.176 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 121 ms. Found 3 JPA repository interfaces.
+INFO  2025/02/03 14:51:25.296 []
+				-[] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+INFO  2025/02/03 14:51:25.298 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:51:25.298 []
+				-[] o.a.catalina.core.StandardService - Starting service [Tomcat]
+INFO  2025/02/03 14:51:25.298 []
+				-[] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+INFO  2025/02/03 14:51:25.309 []
+				-[] o.a.c.c.C.[Tomcat-4].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+INFO  2025/02/03 14:51:25.309 []
+				-[] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 385 ms
+INFO  2025/02/03 14:51:25.317 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+INFO  2025/02/03 14:51:25.351 []
+				-[] com.zaxxer.hikari.pool.HikariPool - HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70083d72
+INFO  2025/02/03 14:51:25.352 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+INFO  2025/02/03 14:51:25.352 []
+				-[] o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/stock_mng'
+INFO  2025/02/03 14:51:25.381 []
+				-[] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+INFO  2025/02/03 14:51:25.501 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2025/02/03 14:51:25.576 []
+				-[] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+INFO  2025/02/03 14:51:25.576 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2025/02/03 14:51:25.577 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+INFO  2025/02/03 14:51:25.585 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+INFO  2025/02/03 14:51:25.586 []
+				-[] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+INFO  2025/02/03 14:51:25.593 []
+				-[] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+ERROR 2025/02/03 14:51:25.595 []
+				-[] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.digitalojt.web.DroneInventorySystemApplication.main(DroneInventorySystemApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:94)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1331)
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	StockInfoService を型に解決できません
+	CategoryInfoService を型に解決できません
+	StockInfo を型に解決できません
+	StockInfoService を型に解決できません
+
+	at com.digitalojt.web.controller.StockListController.<init>(StockListController.java:23)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:195)
+	... 24 common frames omitted
+INFO  2025/02/03 14:51:58.645 []
+				-[] c.d.w.DroneInventorySystemApplication - Starting DroneInventorySystemApplication using Java 17.0.10 with PID 55296 (/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes started by ryosukekijima in /Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem)
+INFO  2025/02/03 14:51:58.645 []
+				-[] c.d.w.DroneInventorySystemApplication - No active profile set, falling back to 1 default profile: "default"
+INFO  2025/02/03 14:51:58.887 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2025/02/03 14:51:58.918 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 3 JPA repository interfaces.
+INFO  2025/02/03 14:51:59.011 []
+				-[] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+INFO  2025/02/03 14:51:59.013 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:51:59.013 []
+				-[] o.a.catalina.core.StandardService - Starting service [Tomcat]
+INFO  2025/02/03 14:51:59.013 []
+				-[] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+INFO  2025/02/03 14:51:59.020 []
+				-[] o.a.c.c.C.[Tomcat-5].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+INFO  2025/02/03 14:51:59.020 []
+				-[] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 373 ms
+INFO  2025/02/03 14:51:59.028 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+INFO  2025/02/03 14:51:59.059 []
+				-[] com.zaxxer.hikari.pool.HikariPool - HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@75d03b49
+INFO  2025/02/03 14:51:59.060 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+INFO  2025/02/03 14:51:59.061 []
+				-[] o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/stock_mng'
+INFO  2025/02/03 14:51:59.090 []
+				-[] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+INFO  2025/02/03 14:51:59.245 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2025/02/03 14:51:59.301 []
+				-[] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+INFO  2025/02/03 14:51:59.301 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2025/02/03 14:51:59.301 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown initiated...
+INFO  2025/02/03 14:51:59.303 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown completed.
+INFO  2025/02/03 14:51:59.304 []
+				-[] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+INFO  2025/02/03 14:51:59.311 []
+				-[] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+ERROR 2025/02/03 14:51:59.313 []
+				-[] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.digitalojt.web.DroneInventorySystemApplication.main(DroneInventorySystemApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:94)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1331)
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	StockInfoService を型に解決できません
+	CategoryInfoService を型に解決できません
+	StockInfo を型に解決できません
+	StockInfoService を型に解決できません
+
+	at com.digitalojt.web.controller.StockListController.<init>(StockListController.java:23)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:195)
+	... 24 common frames omitted
+INFO  2025/02/03 14:52:25.232 []
+				-[] c.d.w.DroneInventorySystemApplication - Starting DroneInventorySystemApplication using Java 17.0.10 with PID 55296 (/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes started by ryosukekijima in /Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem)
+INFO  2025/02/03 14:52:25.233 []
+				-[] c.d.w.DroneInventorySystemApplication - No active profile set, falling back to 1 default profile: "default"
+INFO  2025/02/03 14:52:25.465 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2025/02/03 14:52:25.492 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 3 JPA repository interfaces.
+INFO  2025/02/03 14:52:25.587 []
+				-[] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+INFO  2025/02/03 14:52:25.590 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:52:25.590 []
+				-[] o.a.catalina.core.StandardService - Starting service [Tomcat]
+INFO  2025/02/03 14:52:25.590 []
+				-[] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+INFO  2025/02/03 14:52:25.598 []
+				-[] o.a.c.c.C.[Tomcat-6].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+INFO  2025/02/03 14:52:25.598 []
+				-[] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 362 ms
+INFO  2025/02/03 14:52:25.603 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Starting...
+INFO  2025/02/03 14:52:25.633 []
+				-[] com.zaxxer.hikari.pool.HikariPool - HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@65cc596b
+INFO  2025/02/03 14:52:25.634 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Start completed.
+INFO  2025/02/03 14:52:25.635 []
+				-[] o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/stock_mng'
+INFO  2025/02/03 14:52:25.670 []
+				-[] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+INFO  2025/02/03 14:52:25.788 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2025/02/03 14:52:25.874 []
+				-[] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+INFO  2025/02/03 14:52:25.875 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2025/02/03 14:52:25.875 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown initiated...
+INFO  2025/02/03 14:52:25.882 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown completed.
+INFO  2025/02/03 14:52:25.883 []
+				-[] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+INFO  2025/02/03 14:52:25.889 []
+				-[] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+ERROR 2025/02/03 14:52:25.891 []
+				-[] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.digitalojt.web.DroneInventorySystemApplication.main(DroneInventorySystemApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:94)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1331)
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	StockInfoService を型に解決できません
+	CategoryInfoService を型に解決できません
+	StockInfo を型に解決できません
+	StockInfoService を型に解決できません
+
+	at com.digitalojt.web.controller.StockListController.<init>(StockListController.java:23)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:195)
+	... 24 common frames omitted
+INFO  2025/02/03 14:53:25.524 []
+				-[] c.d.w.DroneInventorySystemApplication - Starting DroneInventorySystemApplication using Java 17.0.10 with PID 55296 (/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes started by ryosukekijima in /Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem)
+INFO  2025/02/03 14:53:25.525 []
+				-[] c.d.w.DroneInventorySystemApplication - No active profile set, falling back to 1 default profile: "default"
+INFO  2025/02/03 14:53:25.621 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2025/02/03 14:53:25.630 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+INFO  2025/02/03 14:53:25.703 []
+				-[] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+INFO  2025/02/03 14:53:25.704 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:53:25.704 []
+				-[] o.a.catalina.core.StandardService - Starting service [Tomcat]
+INFO  2025/02/03 14:53:25.704 []
+				-[] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+INFO  2025/02/03 14:53:25.711 []
+				-[] o.a.c.c.C.[Tomcat-7].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+INFO  2025/02/03 14:53:25.711 []
+				-[] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 184 ms
+INFO  2025/02/03 14:53:25.717 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Starting...
+INFO  2025/02/03 14:53:25.738 []
+				-[] com.zaxxer.hikari.pool.HikariPool - HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@556c2d0a
+INFO  2025/02/03 14:53:25.738 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Start completed.
+INFO  2025/02/03 14:53:25.738 []
+				-[] o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/stock_mng'
+INFO  2025/02/03 14:53:25.761 []
+				-[] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+INFO  2025/02/03 14:53:25.855 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2025/02/03 14:53:25.918 []
+				-[] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+INFO  2025/02/03 14:53:25.919 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2025/02/03 14:53:25.919 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown initiated...
+INFO  2025/02/03 14:53:25.931 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown completed.
+INFO  2025/02/03 14:53:25.932 []
+				-[] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+INFO  2025/02/03 14:53:25.936 []
+				-[] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+ERROR 2025/02/03 14:53:25.938 []
+				-[] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.digitalojt.web.DroneInventorySystemApplication.main(DroneInventorySystemApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:94)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1331)
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	StockInfoService を型に解決できません
+	CategoryInfoService を型に解決できません
+	StockInfo を型に解決できません
+	StockInfoService を型に解決できません
+
+	at com.digitalojt.web.controller.StockListController.<init>(StockListController.java:23)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:195)
+	... 24 common frames omitted
+INFO  2025/02/03 14:54:38.630 []
+				-[] c.d.w.DroneInventorySystemApplication - Starting DroneInventorySystemApplication using Java 17.0.10 with PID 55296 (/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes started by ryosukekijima in /Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem)
+INFO  2025/02/03 14:54:38.630 []
+				-[] c.d.w.DroneInventorySystemApplication - No active profile set, falling back to 1 default profile: "default"
+INFO  2025/02/03 14:54:38.733 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2025/02/03 14:54:38.756 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 3 JPA repository interfaces.
+INFO  2025/02/03 14:54:38.821 []
+				-[] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+INFO  2025/02/03 14:54:38.822 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:54:38.822 []
+				-[] o.a.catalina.core.StandardService - Starting service [Tomcat]
+INFO  2025/02/03 14:54:38.822 []
+				-[] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+INFO  2025/02/03 14:54:38.829 []
+				-[] o.a.c.c.C.[Tomcat-8].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+INFO  2025/02/03 14:54:38.829 []
+				-[] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 196 ms
+INFO  2025/02/03 14:54:38.836 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Starting...
+INFO  2025/02/03 14:54:38.851 []
+				-[] com.zaxxer.hikari.pool.HikariPool - HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@489c4f3d
+INFO  2025/02/03 14:54:38.851 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Start completed.
+INFO  2025/02/03 14:54:38.851 []
+				-[] o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/stock_mng'
+INFO  2025/02/03 14:54:38.905 []
+				-[] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+INFO  2025/02/03 14:54:38.986 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2025/02/03 14:54:39.038 []
+				-[] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+INFO  2025/02/03 14:54:39.039 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2025/02/03 14:54:39.039 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown initiated...
+INFO  2025/02/03 14:54:39.044 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown completed.
+INFO  2025/02/03 14:54:39.045 []
+				-[] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+INFO  2025/02/03 14:54:39.050 []
+				-[] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+ERROR 2025/02/03 14:54:39.053 []
+				-[] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.digitalojt.web.DroneInventorySystemApplication.main(DroneInventorySystemApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:94)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1331)
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	StockInfoService を型に解決できません
+	CategoryInfoService を型に解決できません
+	StockInfo を型に解決できません
+	StockInfoService を型に解決できません
+
+	at com.digitalojt.web.controller.StockListController.<init>(StockListController.java:23)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:195)
+	... 24 common frames omitted
+INFO  2025/02/03 14:54:58.886 []
+				-[] c.d.w.DroneInventorySystemApplication - Starting DroneInventorySystemApplication using Java 17.0.10 with PID 55296 (/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes started by ryosukekijima in /Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem)
+INFO  2025/02/03 14:54:58.887 []
+				-[] c.d.w.DroneInventorySystemApplication - No active profile set, falling back to 1 default profile: "default"
+INFO  2025/02/03 14:54:58.980 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2025/02/03 14:54:58.986 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+INFO  2025/02/03 14:54:59.047 []
+				-[] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+INFO  2025/02/03 14:54:59.048 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:54:59.048 []
+				-[] o.a.catalina.core.StandardService - Starting service [Tomcat]
+INFO  2025/02/03 14:54:59.048 []
+				-[] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+INFO  2025/02/03 14:54:59.055 []
+				-[] o.a.c.c.C.[Tomcat-9].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+INFO  2025/02/03 14:54:59.055 []
+				-[] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 166 ms
+INFO  2025/02/03 14:54:59.061 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Starting...
+INFO  2025/02/03 14:54:59.090 []
+				-[] com.zaxxer.hikari.pool.HikariPool - HikariPool-11 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6d86ecf0
+INFO  2025/02/03 14:54:59.091 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Start completed.
+INFO  2025/02/03 14:54:59.091 []
+				-[] o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/stock_mng'
+INFO  2025/02/03 14:54:59.119 []
+				-[] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+WARN  2025/02/03 14:54:59.144 []
+				-[] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: CategoryInfo
+INFO  2025/02/03 14:54:59.145 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown initiated...
+INFO  2025/02/03 14:54:59.146 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown completed.
+INFO  2025/02/03 14:54:59.146 []
+				-[] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+INFO  2025/02/03 14:54:59.151 []
+				-[] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+ERROR 2025/02/03 14:54:59.154 []
+				-[] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: CategoryInfo
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.digitalojt.web.DroneInventorySystemApplication.main(DroneInventorySystemApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.NoClassDefFoundError: CategoryInfo
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504)
+	at org.hibernate.annotations.common.reflection.java.JavaXClass.getDeclaredMethodProperties(JavaXClass.java:137)
+	at org.hibernate.annotations.common.reflection.java.JavaXClass.getDeclaredProperties(JavaXClass.java:175)
+	at org.hibernate.annotations.common.reflection.java.JavaXClass.getDeclaredProperties(JavaXClass.java:167)
+	at org.hibernate.boot.model.internal.InheritanceState.determineDefaultAccessType(InheritanceState.java:259)
+	at org.hibernate.boot.model.internal.InheritanceState.getElementsToProcess(InheritanceState.java:215)
+	at org.hibernate.boot.model.internal.InheritanceState.postProcess(InheritanceState.java:160)
+	at org.hibernate.boot.model.internal.EntityBinder.handleIdentifier(EntityBinder.java:348)
+	at org.hibernate.boot.model.internal.EntityBinder.bindEntityClass(EntityBinder.java:237)
+	at org.hibernate.boot.model.internal.AnnotationBinder.bindClass(AnnotationBinder.java:423)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:256)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:279)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:322)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: CategoryInfo
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 44 common frames omitted
+INFO  2025/02/03 14:55:33.253 []
+				-[] c.d.w.DroneInventorySystemApplication - Starting DroneInventorySystemApplication using Java 17.0.10 with PID 55296 (/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes started by ryosukekijima in /Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem)
+INFO  2025/02/03 14:55:33.254 []
+				-[] c.d.w.DroneInventorySystemApplication - No active profile set, falling back to 1 default profile: "default"
+INFO  2025/02/03 14:55:33.363 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2025/02/03 14:55:33.375 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 3 JPA repository interfaces.
+INFO  2025/02/03 14:55:33.449 []
+				-[] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+INFO  2025/02/03 14:55:33.451 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:55:33.451 []
+				-[] o.a.catalina.core.StandardService - Starting service [Tomcat]
+INFO  2025/02/03 14:55:33.451 []
+				-[] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+INFO  2025/02/03 14:55:33.458 []
+				-[] o.a.c.c.C.[.[localhost].[/] - Initializing Spring embedded WebApplicationContext
+INFO  2025/02/03 14:55:33.459 []
+				-[] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 200 ms
+INFO  2025/02/03 14:55:33.464 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Starting...
+INFO  2025/02/03 14:55:33.505 []
+				-[] com.zaxxer.hikari.pool.HikariPool - HikariPool-12 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13ae33e2
+INFO  2025/02/03 14:55:33.506 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Start completed.
+INFO  2025/02/03 14:55:33.506 []
+				-[] o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/stock_mng'
+INFO  2025/02/03 14:55:33.529 []
+				-[] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+INFO  2025/02/03 14:55:33.640 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2025/02/03 14:55:33.693 []
+				-[] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+INFO  2025/02/03 14:55:33.693 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2025/02/03 14:55:33.694 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown initiated...
+INFO  2025/02/03 14:55:33.703 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown completed.
+INFO  2025/02/03 14:55:33.704 []
+				-[] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+INFO  2025/02/03 14:55:33.709 []
+				-[] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+ERROR 2025/02/03 14:55:33.711 []
+				-[] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.digitalojt.web.DroneInventorySystemApplication.main(DroneInventorySystemApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:94)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1331)
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	StockInfoService を型に解決できません
+	CategoryInfoService を型に解決できません
+	StockInfo を型に解決できません
+	StockInfoService を型に解決できません
+
+	at com.digitalojt.web.controller.StockListController.<init>(StockListController.java:23)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:195)
+	... 24 common frames omitted
+INFO  2025/02/03 14:55:51.467 []
+				-[] c.d.w.DroneInventorySystemApplication - Starting DroneInventorySystemApplication using Java 17.0.10 with PID 55296 (/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes started by ryosukekijima in /Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem)
+INFO  2025/02/03 14:55:51.467 []
+				-[] c.d.w.DroneInventorySystemApplication - No active profile set, falling back to 1 default profile: "default"
+INFO  2025/02/03 14:55:51.588 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2025/02/03 14:55:51.597 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+INFO  2025/02/03 14:55:51.648 []
+				-[] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+INFO  2025/02/03 14:55:51.649 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:55:51.649 []
+				-[] o.a.catalina.core.StandardService - Starting service [Tomcat]
+INFO  2025/02/03 14:55:51.649 []
+				-[] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+INFO  2025/02/03 14:55:51.655 []
+				-[] o.a.c.c.C.[.[localhost].[/] - Initializing Spring embedded WebApplicationContext
+INFO  2025/02/03 14:55:51.655 []
+				-[] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 186 ms
+INFO  2025/02/03 14:55:51.661 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Starting...
+INFO  2025/02/03 14:55:51.672 []
+				-[] com.zaxxer.hikari.pool.HikariPool - HikariPool-13 - Added connection com.mysql.cj.jdbc.ConnectionImpl@626f9be5
+INFO  2025/02/03 14:55:51.673 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Start completed.
+INFO  2025/02/03 14:55:51.673 []
+				-[] o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/stock_mng'
+INFO  2025/02/03 14:55:51.696 []
+				-[] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+INFO  2025/02/03 14:55:51.776 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2025/02/03 14:55:51.815 []
+				-[] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+INFO  2025/02/03 14:55:51.816 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2025/02/03 14:55:51.816 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown initiated...
+INFO  2025/02/03 14:55:51.840 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown completed.
+INFO  2025/02/03 14:55:51.841 []
+				-[] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+INFO  2025/02/03 14:55:51.847 []
+				-[] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+ERROR 2025/02/03 14:55:51.848 []
+				-[] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockListController' defined in file [/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes/com/digitalojt/web/controller/StockListController.class]: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.digitalojt.web.DroneInventorySystemApplication.main(DroneInventorySystemApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.digitalojt.web.controller.StockListController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:94)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1331)
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	StockInfoService を型に解決できません
+	CategoryInfoService を型に解決できません
+
+	at com.digitalojt.web.controller.StockListController.<init>(StockListController.java:20)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:195)
+	... 24 common frames omitted
+INFO  2025/02/03 14:55:57.393 []
+				-[] c.d.w.DroneInventorySystemApplication - Starting DroneInventorySystemApplication using Java 17.0.10 with PID 55296 (/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes started by ryosukekijima in /Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem)
+INFO  2025/02/03 14:55:57.393 []
+				-[] c.d.w.DroneInventorySystemApplication - No active profile set, falling back to 1 default profile: "default"
+INFO  2025/02/03 14:55:57.460 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2025/02/03 14:55:57.466 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+INFO  2025/02/03 14:55:57.517 []
+				-[] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+INFO  2025/02/03 14:55:57.517 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:55:57.518 []
+				-[] o.a.catalina.core.StandardService - Starting service [Tomcat]
+INFO  2025/02/03 14:55:57.518 []
+				-[] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+INFO  2025/02/03 14:55:57.522 []
+				-[] o.a.c.c.C.[.[localhost].[/] - Initializing Spring embedded WebApplicationContext
+INFO  2025/02/03 14:55:57.522 []
+				-[] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 127 ms
+INFO  2025/02/03 14:55:57.527 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Starting...
+INFO  2025/02/03 14:55:57.539 []
+				-[] com.zaxxer.hikari.pool.HikariPool - HikariPool-14 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66375082
+INFO  2025/02/03 14:55:57.539 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Start completed.
+INFO  2025/02/03 14:55:57.539 []
+				-[] o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/stock_mng'
+INFO  2025/02/03 14:55:57.567 []
+				-[] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+INFO  2025/02/03 14:55:57.632 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  2025/02/03 14:55:57.764 []
+				-[] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2025/02/03 14:55:57.833 []
+				-[] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6b4c3c2e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46a6852a, org.springframework.security.web.context.SecurityContextHolderFilter@6570bceb, org.springframework.security.web.header.HeaderWriterFilter@c213741, org.springframework.security.web.csrf.CsrfFilter@53861705, org.springframework.security.web.authentication.logout.LogoutFilter@25b95444, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@55a54221, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62da17f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b9de57e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75966cc7, org.springframework.security.web.access.ExceptionTranslationFilter@95a10d, org.springframework.security.web.access.intercept.AuthorizationFilter@3ad12a4b]
+INFO  2025/02/03 14:55:57.879 []
+				-[] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+INFO  2025/02/03 14:55:57.888 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:55:57.891 []
+				-[] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+INFO  2025/02/03 14:55:57.895 []
+				-[] c.d.w.DroneInventorySystemApplication - Started DroneInventorySystemApplication in 0.544 seconds (process running for 809.64)
+INFO  2025/02/03 14:55:57.897 []
+				-[] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+INFO  2025/02/03 14:56:03.384 []
+				-[] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+INFO  2025/02/03 14:56:03.385 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:56:03.390 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2025/02/03 14:56:03.391 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown initiated...
+INFO  2025/02/03 14:56:03.393 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown completed.
+INFO  2025/02/03 14:56:12.770 []
+				-[] c.d.w.DroneInventorySystemApplication - Starting DroneInventorySystemApplication using Java 17.0.10 with PID 55604 (/Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem/target/classes started by ryosukekijima in /Users/Kijima/Documents/development-SEcourse-DroneInventorySystem/DroneInventorySystem)
+INFO  2025/02/03 14:56:12.772 []
+				-[] c.d.w.DroneInventorySystemApplication - No active profile set, falling back to 1 default profile: "default"
+INFO  2025/02/03 14:56:12.843 []
+				-[] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  2025/02/03 14:56:12.843 []
+				-[] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  2025/02/03 14:56:13.568 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  2025/02/03 14:56:13.667 []
+				-[] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 94 ms. Found 3 JPA repository interfaces.
+INFO  2025/02/03 14:56:14.185 []
+				-[] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+INFO  2025/02/03 14:56:14.191 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:56:14.193 []
+				-[] o.a.catalina.core.StandardService - Starting service [Tomcat]
+INFO  2025/02/03 14:56:14.193 []
+				-[] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+INFO  2025/02/03 14:56:14.227 []
+				-[] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+INFO  2025/02/03 14:56:14.228 []
+				-[] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1385 ms
+INFO  2025/02/03 14:56:14.255 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+INFO  2025/02/03 14:56:14.500 []
+				-[] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@183a21b2
+INFO  2025/02/03 14:56:14.502 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+INFO  2025/02/03 14:56:14.511 []
+				-[] o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/stock_mng'
+INFO  2025/02/03 14:56:14.826 []
+				-[] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+INFO  2025/02/03 14:56:15.553 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  2025/02/03 14:56:15.743 []
+				-[] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+WARN  2025/02/03 14:56:16.101 []
+				-[] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  2025/02/03 14:56:16.380 []
+				-[] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@195ffb7b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6fe58637, org.springframework.security.web.context.SecurityContextHolderFilter@578a12e6, org.springframework.security.web.header.HeaderWriterFilter@10c5eed3, org.springframework.security.web.csrf.CsrfFilter@5c6e0560, org.springframework.security.web.authentication.logout.LogoutFilter@190216e1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@229a8ac5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@88efaf8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a9f5f3f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d6f14a3, org.springframework.security.web.access.ExceptionTranslationFilter@7de73e21, org.springframework.security.web.access.intercept.AuthorizationFilter@6b72fbb2]
+INFO  2025/02/03 14:56:16.665 []
+				-[] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+INFO  2025/02/03 14:56:16.696 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:56:16.708 []
+				-[] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+INFO  2025/02/03 14:56:16.720 []
+				-[] c.d.w.DroneInventorySystemApplication - Started DroneInventorySystemApplication in 4.301 seconds (process running for 5.355)
+INFO  2025/02/03 14:56:17.838 []
+				-[] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  2025/02/03 14:56:17.839 []
+				-[] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+INFO  2025/02/03 14:56:17.840 []
+				-[] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+INFO  2025/02/03 14:56:20.168 [0:0:0:0:0:0:0:1]
+				-[dotlife] c.d.w.c.CenterInfoController - ACCESS
+INFO  2025/02/03 14:56:20.215 [0:0:0:0:0:0:0:1]
+				-[dotlife] c.d.w.c.CenterInfoController - APP: GET - index - START
+INFO  2025/02/03 14:56:20.302 [0:0:0:0:0:0:0:1]
+				-[dotlife] c.d.w.c.CenterInfoController - APP: GET - index - END
+INFO  2025/02/03 14:56:50.497 []
+				-[] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+INFO  2025/02/03 14:56:50.508 []
+				-[] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+INFO  2025/02/03 14:56:50.534 []
+				-[] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  2025/02/03 14:56:50.540 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+INFO  2025/02/03 14:56:50.554 []
+				-[] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
